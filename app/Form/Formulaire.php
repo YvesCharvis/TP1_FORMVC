@@ -6,29 +6,29 @@ namespace App;
 */
 class form
 {
-	
 
+$form = [];	
 
-$erreur = [];
-if (isset($_POST) && !empty($_POST)) {
-	$donner=[];
+function formulaire()
+		if (isset($_POST) && !empty($_POST)) {
+			$donner=[];
 
 		if (isset($_POST["nom"]) && $_POST['nom']!='') {
 			$donner['lastname'] = $_POST["nom"];
 		}else{
-			$erreur[] = 'merci de mettre un nom';
+			$form[] = 'merci de mettre un nom';
 		}
 
 		if (isset($_POST["prenom"]) && $_POST['prenom']!='') {
 			$donner['firstName'] = $_POST["prenom"];
 		}else{
-			$erreur[] = 'merci de mettre un prenom';
+			$form[] = 'merci de mettre un prenom';
 		}
 
 		if (isset($_POST["naissance"]) && $_POST['naissance']!='') {
 			$donner['birthDate'] = $_POST["naissance"];
 		}else{
-			$erreur[] = 'merci de mettre une date naissance';
+			$form[] = 'merci de mettre une date naissance';
 		}
 
 		if (isset($_POST["card"])) {
@@ -37,7 +37,7 @@ if (isset($_POST) && !empty($_POST)) {
 				if (isset($_POST["numeCard"])) {
 				$donner['cardNumber'] = $_POST["numeCard"];
 				}else{
-				$erreur[] = 'merci de mettre un numéro carte';
+				$form[] = 'merci de mettre un numéro carte';
 				}
 		}else{
 			$donner['card'] = 0;
@@ -45,7 +45,7 @@ if (isset($_POST) && !empty($_POST)) {
 		}
 
 
-		if (empty($erreur)) {
+		if (empty($form)) {
 
 			/*INSERT TO INTO nomdelatable SET*/
 			$statement = $pdo->prepare("
@@ -62,7 +62,7 @@ if (isset($_POST) && !empty($_POST)) {
 
 
 
-$erreur[] = "<div class='list-group-item list-group-item-success'>le client est bien ADD'</div>";
+$form[] = "<div class='list-group-item list-group-item-success'>le client est bien ADD'</div>";
 			
 		}
 	}
@@ -75,7 +75,7 @@ $erreur[] = "<div class='list-group-item list-group-item-success'>le client est 
 
 
 
-<?php foreach ($erreur as $value) {
+<?php foreach ($form as $value) {
 	echo "<li class='list-group-item list-group-item-danger'> $value <li> <br>" ;
 }
 
