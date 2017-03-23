@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+body {
+  background-color: #000000; }
+
+h1 {
+  text-align: center;
+  color: #FFFFFF;
+  border-bottom: 4px solid #26A69A;
+  font-family: 'Press Start 2P', cursive; }
+
+.Formulaire {
+  text-align: center;
+  margin: 80px; }

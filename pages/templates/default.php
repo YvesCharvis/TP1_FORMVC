@@ -13,6 +13,11 @@
   </head>
 <body>
 
+
+<H1>OMG! FORMULAIRE</H1>
+
+
+<div class="Formulaire">
 <div class="row">
     <form class="col s6">
     <div class="row">
@@ -42,6 +47,10 @@
 		</div>
 	</div>
 </form>
+<div class="col s6">
+	<img class="col s12" src="img/pacman.png">
+</div>
+</div>
 
 </body>
 </html>
