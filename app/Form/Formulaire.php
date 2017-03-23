@@ -1,11 +1,12 @@
 <?php
 namespace App;
 
-
-
-
-
-
+/**
+* 
+*/
+class form
+{
+	
 
 
 $erreur = [];
@@ -78,4 +79,5 @@ $erreur[] = "<div class='list-group-item list-group-item-success'>le client est 
 	echo "<li class='list-group-item list-group-item-danger'> $value <li> <br>" ;
 }
 
+}
 ?>
