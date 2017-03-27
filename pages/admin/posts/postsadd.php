@@ -9,7 +9,7 @@
 				"date"=>$_POST['date'],
 				"adress"=>$_POST['adress'],
 				"codePost"=>$_POST['codePost'],
-				"numTel"=>$_POST['numTel'],
+				"numTel"=>$_POST['numTel']			
 				]);
 			if ($res) {
 				////message Flash
@@ -32,6 +32,10 @@
 	<input class="form-control" type="text" name="adress" value="" placeholder="Adresse">
 	<input class="form-control" type="value" name="codePost" value="" placeholder="Code Postale">
 	<input class="form-control" type="value" name="numTel" value="" placeholder="Numéro de Téléphone">
+<!-- 
+	<select>
+		<option name="service.id" value="<?= $post->id; ?>" ></option>
+	</select> -->
 
 	<input class="btn btn-primary" type="submit" name="">
 </form>

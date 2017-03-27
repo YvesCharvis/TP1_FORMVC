@@ -1,12 +1,13 @@
 
 <?php
-$posts = App::getInstance()->getTable('Post')->all();
+$posts = App::getInstance()->getTable('post')->all();
 
 ?>
-	<?php foreach ($posts as $post) : ?>
+	
 <table class="table">
 
-	<thead>
+	
+
 		<tr>
 			<td>ID</td>
 			<td>First Name</td>
@@ -17,8 +18,8 @@ $posts = App::getInstance()->getTable('Post')->all();
 			<td>Numéro De Tel</td>
 			<td>Services</td>
 		</tr>
-	</thead>
-	<tbody>
+	
+<?php foreach ($posts as $post) : ?>
 	
 		<tr>
 			
@@ -29,11 +30,11 @@ $posts = App::getInstance()->getTable('Post')->all();
 		<td><?= $post->adress; ?></td>
 		<td><?= $post->codePost; ?></td>
 		<td><?= $post->numTel; ?></td>
-		<td><?= $post->service_id; ?></td>
+		
 		</tr>
-	</tbody>
-
-	</table>
 
 
 <?php endforeach; ?>
+
+	</table>
+

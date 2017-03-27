@@ -2,12 +2,12 @@
 $app = App::getInstance();
 
 
-$categorie = $app->getTable('category')->find($_GET['id']);
+$categorie = $app->getTable('services')->find($_GET['id']);
 if ($categorie===false){
 	$app->notFound();
 }
 $articles = $app->getTable('post')->lastByCategory($_GET['id']);
-$categories = $app->getTable('category')->all();
+$services = $app->getTable('services')->all();
 ?>
 
 <h1><?= $categorie->titre;  ?></h1>
@@ -20,15 +20,15 @@ $categories = $app->getTable('category')->all();
 		      <?= $post->titre;?>  
 		    </a>
 		  </h2>
-		  <p><em><?= $post->category;?></em></p>
+		  <p><em><?= $post->services;?></em></p>
 		  <p><?= $post->Extrait; ?></p>
 		<?php endforeach; ?>
 	</div>
 	<div class="col-md-4">
 		<ul>
-			<?php foreach ($categories as $categorie) : ?>
+			<?php foreach ($services as $services) : ?>
 
-				<li><a href="<?= $categorie->Url; ?>"><?= $categorie->titre; ?></a></li>
+				<li><a href="<?= $categorie->Url; ?>"><?= $services->titre; ?></a></li>
 		<?php endforeach; ?>
 		</ul>
 	</div>

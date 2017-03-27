@@ -1,5 +1,5 @@
 <?php
-$posts = App::getInstance()->getTable('Post')->all();
+$posts = App::getInstance()->getTable('post')->all();
 
 ?>
 
@@ -31,11 +31,10 @@ $posts = App::getInstance()->getTable('Post')->all();
 		<td><?= $post->adress; ?></td>
 		<td><?= $post->codePost; ?></td>
 		<td><?= $post->numTel; ?></td>
-		<td><?= $post->service_id; ?></td>
-
 		
-<form>
-<td method="post" action="admin.php?p=posts.delete">
+
+		<td>
+<form method="post" action="admin.php?p=posts.delete">
 	<input type="hidden" name="id" value="<?= $post->id; ?>">
 	<input class="btn btn-danger" type="submit" name="OK" value="Delete">
 </form>
