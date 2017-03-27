@@ -46,3 +46,11 @@ $posts = App::getInstance()->getTable('post')->all();
 	<?php endforeach; ?>
 	</tbody>
 </table>
+<div class="row">
+
+<ul class="pager">
+    <li><a href="admin.php?p=posts.add">Ajouter un Utilisateur</a></li>
+    <li><a href="admin.php">Panel Administration</a></li>
+</ul>
+</div>
+</div>

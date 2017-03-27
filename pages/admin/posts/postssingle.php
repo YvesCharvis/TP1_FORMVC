@@ -35,3 +35,11 @@
 	<input class="form-control" type="value" name="numTel" value="" placeholder="Numéro de Téléphone">
 </form>
 
+
+
+  
+<ul class="pager">
+    <li><a href="index.php?p=<?=$connect ?>"><?= $connect ?></a></li>
+    <li><a href="admin.php">Panel Administration</a></li>
+</ul>
+

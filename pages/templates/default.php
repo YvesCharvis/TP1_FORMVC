@@ -23,10 +23,11 @@
       </button>
           <a class="navbar-brand" href="index.php">Utilisateur</a>
     </div>
+
   <div id="navbar" class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
     <li><a href="index.php?p=<?=$connect ?>"><?= $connect ?></a></li>
-    <li><a href="admin.php">Panel Administration</a></li>
+    <li><a href="admin.php?p=posts.edit">Ajouter\suprimer</a></li>
 </ul>
   </div><!--/.nav-collapse -->
   </div>
