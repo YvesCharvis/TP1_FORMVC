@@ -26,4 +26,5 @@ class Config
 		}
 		return $this->settings[$key];
 	}
+
 }
