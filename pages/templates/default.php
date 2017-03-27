@@ -5,56 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    	<!-- Bootstrap core CSS -->
-    	<link href="frameworks/Bootstrap.min.css" rel="stylesheet">
-   		<link href="frameworks/materialize.min.css" rel="stylesheet">
-
-    	<link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title><?= App::getInstance()->titre; ?></title>
+                <!-- Bootstrap & materialize core CSS -->
+      <link rel="stylesheet" type="text/css" href="frameworks/bootstrap.min.css">
+     <!--  <link rel="stylesheet" type="text/css" href="frameworks/materialize.min.css"> -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
 <body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+          <a class="navbar-brand" href="index.php">newapp</a>
+    </div>
+  <div id="navbar" class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+    <li><a href="index.php?p=<?=$connect ?>"><?= $connect ?></a></li>
+</ul>
+  </div><!--/.nav-collapse -->
+  </div>
+</nav>
+  <div class="container">
+      <div class="starter-template">
+        <?= $content; ?>
+      </div>
 
-
-<H1>OMG! FORMULAIRE</H1>
-
-
-<div class="Formulaire">
-<div class="row">
-		<form class="col s6">
-		    <div class="row">
-		    	<div class="input-field col s6">
-					<label class=""><input type="text" class="validate" name="nom" placeholder="Nom"></label> 
-				</div>
-				<div class="input-field col s6">		
-					<label class=""><input type="text" class="validate" name="prenom" placeholder="Prenom"></label>
-				</div>
-			</div>
-			<div class="row">
-		 		   	<div class="input-field col s6">
-					<label class=""><input type="date" class="form-control" name="naissance"></label>
-				</div>
-			</div>
-			<div class="row">
-		        <div class="input-field col s6">	
-					<label class=""><input type="text" class="form-control" name="adresse" placeholder="Adresse"></label>
-				</div>
-		        <div class="input-field col s6">	 	
-					<label class="">  <input type="number" class="form-control" name="postal" placeholder="Code Postale"></label>
-				</div>
-			</div>	 
-			<div class="row">
-		        <div class="input-field col s4">		
-					<label class=""><input type="number" class="form-control" name="phone" placeholder="Numéro de téléphone"></label>
-				</div>
-			</div>
-				<div class="flex dark">
- 		 			<a type="submit" class="bttn-dark"> Continue</a>
-				</div>
-		</form>
-	<div class="col s6">
-		<img class="col s12" src="img/pacman.png">
-	</div>
-</div>
-</div>
-
+  </div><!-- /.container -->
 </body>
+                <!-- SCRIPTS LOADS -->
+<!-- <script type="text/javascript" hrel="scripts/bootstrap.min.js"></script>
+     <script type="text/javascript" hrel="jquery-3.2.0.min.js"></script> -->
 </html>
