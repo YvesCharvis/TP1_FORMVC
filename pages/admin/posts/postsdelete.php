@@ -4,7 +4,7 @@
 
 	if ($_POST) {
 		if (!empty($_POST['id'])) {
-			$res = $app->getTable('post')->delete($_POST['id']);
+			$res = $app->getTable('Post')->delete($_POST['id']);
 				
 
 			if ($res) {

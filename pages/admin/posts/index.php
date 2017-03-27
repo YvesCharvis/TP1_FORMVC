@@ -4,15 +4,20 @@ $posts = App::getInstance()->getTable('Post')->all();
 ?>
 
 
-<h1>COUCOU COMING PTRUEL</h1>
+<h1>Gestion Utilisateurs</h1>
 
 
 <table class="table">
 	<thead>
 		<tr>
 			<td>ID</td>
-			<td>TITRE</td>
-			<td>ACTION</td>
+			<td>First Name</td>
+			<td>lastName</td>
+			<td>naissance</td>
+			<td>Adresse</td>
+			<td>Code Postal</td>
+			<td>Numéro De Tel</td>
+			<td>Services</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -20,10 +25,17 @@ $posts = App::getInstance()->getTable('Post')->all();
 		<tr>
 			
 		<td><?= $post->id; ?></td>
-		<td><?= $post->titre; ?></td>
-		<td><a href="admin.php?p=posts.single&id=<?=$post->id;?>"><button>edit</button>
+		<td><?= $post->firstName; ?></td>
+		<td><?= $post->lastName; ?></td>
+		<td><?= $post->date; ?></td>
+		<td><?= $post->adress; ?></td>
+		<td><?= $post->codePost; ?></td>
+		<td><?= $post->numTel; ?></td>
+		<td><?= $post->service_id; ?></td>
 
-<form method="post" action="admin.php?p=posts.delete" style="display: inline-block;">
+		
+<form>
+<td method="post" action="admin.php?p=posts.delete">
 	<input type="hidden" name="id" value="<?= $post->id; ?>">
 	<input class="btn btn-danger" type="submit" name="OK" value="Delete">
 </form>

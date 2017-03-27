@@ -3,7 +3,7 @@ return array(
 
 	"db_user" => "root",
 	"db_pass" => "",
-	"db_name" => "newapp",
+	"db_name" => "tp1",
 	"db_host" => "localhost"
 
 	);

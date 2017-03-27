@@ -21,11 +21,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-          <a class="navbar-brand" href="index.php">newapp</a>
+          <a class="navbar-brand" href="index.php">Utilisateur</a>
     </div>
   <div id="navbar" class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
     <li><a href="index.php?p=<?=$connect ?>"><?= $connect ?></a></li>
+    <li><a href="admin.php">Panel Administration</a></li>
 </ul>
   </div><!--/.nav-collapse -->
   </div>
