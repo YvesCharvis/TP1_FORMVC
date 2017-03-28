@@ -36,6 +36,8 @@ $connect = "Disconnect";
 ob_start();
 if ($page==='home') {
 	require ROOT.'/pages/admin/index.php';
+}elseif ($page==='utilisateurs') {
+	require ROOT.'/pages/admin/utilisateurs/index.php';
 	/////suite pour post
 }else{
 	require ROOT.'/pages/errors/404.php';
