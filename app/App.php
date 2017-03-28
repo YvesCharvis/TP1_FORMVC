@@ -5,12 +5,12 @@ use Core\Config;
 
 class App
 {
-	public $titre = 'mon super site';
+	public $titre = 'TP1';
 	
 	private static $_instance;
 	private $db_instance;
 
-	public static function load()
+	public static function load() // donne l'accéé a toute les class
 	{
 		session_start();
 		require ROOT.'/app/Autoloader.php';
@@ -20,7 +20,7 @@ class App
 	}
 
 	public static function getInstance(){
-		if (is_null(self::$_instance)){
+		if (is_null(self::$_instance)){ //garder toujours une même instance
 			self::$_instance = new App();
 		}
 		return self::$_instance;

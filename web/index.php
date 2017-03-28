@@ -1,7 +1,7 @@
 <?php
 use Core\Auth\DBAuth;
 define('ROOT', dirname(__DIR__));
-require ROOT.'/app/App.php';
+require ROOT.'/app/App.php'; // permet l'absolute
 App::load();
 
 if (isset($_GET['p'])) {
@@ -21,12 +21,8 @@ if ($auth->logged()) {
 /////////////////////////
 
 ob_start();
-if ($page==='home') {
-	require ROOT.'/pages/posts/home.php';
-}elseif ($page==='posts.category') {
-	require ROOT.'/pages/posts/category.php';
-}elseif ($page==='posts.single') {
-	require ROOT.'/pages/posts/single.php';
+if ($page==='home') {  // Charge centre page (contente)
+	require ROOT.'/pages/index.php';
 }elseif ($page==='login') {
 	require ROOT.'/pages/users/login.php';
 }elseif ($page==='Disconnect') {
@@ -36,5 +32,5 @@ if ($page==='home') {
 }elseif ($page==='404') {
 	require ROOT.'/pages/errors/404.php';
 }
-$content = ob_get_clean();
+$content = ob_get_clean(); // Le template 
 require ROOT.'/pages/templates/default.php'; 
