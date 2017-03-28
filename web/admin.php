@@ -38,6 +38,8 @@ if ($page==='home') {
 	require ROOT.'/pages/admin/index.php';
 }elseif ($page==='utilisateurs') {
 	require ROOT.'/pages/admin/utilisateurs/index.php';
+}elseif ($page==='utilisateurs.delete') {
+	require ROOT.'/pages/admin/utilisateurs/delete.php';
 	/////suite pour post
 }else{
 	require ROOT.'/pages/errors/404.php';
