@@ -34,12 +34,19 @@ if (!$auth->logged()) {
 $connect = "Disconnect";
 
 ob_start();
+//utilisateur
 if ($page==='home') {
 	require ROOT.'/pages/admin/index.php';
 }elseif ($page==='utilisateurs') {
 	require ROOT.'/pages/admin/utilisateurs/index.php';
 }elseif ($page==='utilisateurs.delete') {
 	require ROOT.'/pages/admin/utilisateurs/delete.php';
+	//services
+}elseif ($page==='services') {
+	require ROOT.'/pages/admin/services/index.php';
+}elseif ($page==='services.delete') {
+	require ROOT.'/pages/admin/services/delete.php';
+
 	/////suite pour post
 }else{
 	require ROOT.'/pages/errors/404.php';
