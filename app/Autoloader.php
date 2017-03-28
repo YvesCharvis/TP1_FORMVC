@@ -4,7 +4,6 @@ namespace App;
 /**
 * Autoloader
 */
-
 class Autoloader
 {
 		static function register(){
