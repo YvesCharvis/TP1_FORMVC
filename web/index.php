@@ -27,6 +27,8 @@ if ($page==='home') {  // Charge centre page (contente)
 	require ROOT.'/pages/users/login.php';
 }elseif ($page==='utilisateurs') {
 	require ROOT.'/pages/utilisateurs/index.php';
+}elseif ($page==='utilisateurs.service') {
+	require ROOT.'/pages/utilisateurs/service.php';
 
 	///ROUTE BASIC\\\
 }elseif ($page==='Disconnect') {
